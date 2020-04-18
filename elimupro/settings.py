@@ -133,3 +133,9 @@ MEDIA_URL = '/media/'
 from django.urls import reverse_lazy
 
 LOGIN_REDIRECT_URL = reverse_lazy('student_course_list')
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.jangoModelPermissionsOrAnonReadOnly'
+    ]
+}
