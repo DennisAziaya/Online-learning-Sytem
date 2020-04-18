@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'courses.apps.CoursesConfig',
     'students.apps.StudentsConfig',
     'embed_video',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -136,6 +137,6 @@ LOGIN_REDIRECT_URL = reverse_lazy('student_course_list')
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.jangoModelPermissionsOrAnonReadOnly'
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
 }
